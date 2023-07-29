@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* my css */
+
+
+/* Common button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+
+/* Hover styles for all buttons */
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05); /* Scale the button slightly on hover */
+}
+
+/* navbar.css */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  text-decoration: wavy;
+  box-shadow: 0px 2px 4px rgba(255, 250, 250, 0.736);
+  transition: transform 0.3s, opacity 0.3s, background-image 0.3s; /* Added background-image */
+}
+
+.btn:hover {
+  opacity: 0.7;
+  transform: scale(1.20);
+  /* background-image: linear-gradient(to right, #0beaea, #b2ed11); */
+  transition-duration: 0.3s;   /* Adjust the gradient colors as desired */
+  color: black;
+  
+}
+
+/* navbar.css */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, opacity 0.3s, background-image 0.3s;
+  position: relative; /* Required for absolute positioning of pseudo-element */
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0%; /* Initially positioned outside the button on the left */
+  width: 100%;
+  height: 100%;
+  /* background-image: linear-gradient(to right, #4F46E5, #9148E5); */
+  border-radius: 8px;
+  transition: left 0.3s; /* Use 'left' property for the transition */
+  z-index: -1; /* Place the pseudo-element behind the button content */
+}
+
+.btn:hover:before {
+  left: 0; /* Move the pseudo-element to the right to reveal the gradient */
+}
+
+/* Update .signature-heading styles */
+.signature-heading {
+  font-family: 'CustomCursiveFont'; /* Replace with your desired cursive font-family */
+  font-weight: lighter;
+  font-size: 5rem; /* Updated font size to 5rem */
+  text-transform: capitalize; /* Capitalize the first letter of each word */
+  color: #232322; /* Your desired color for the signature heading */
+  text-shadow: 6px -4px 9px rgb(255, 255, 255); /* Add a subtle text shadow */
+  border-radius: 10px; /* Added border-radius to make it slightly curvy */
+  padding: 3px; /* Reduced padding to 3px */
+  letter-spacing: 4px; /* Added letter spacing to make the letters more spacious */
+  line-height: 1.2; /* Adjust line height to make the text bigger while reducing the height of the navbar */
+}
+
+/* Fading in for the Footer component */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+
