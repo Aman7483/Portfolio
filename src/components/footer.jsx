@@ -33,7 +33,7 @@ const Footer = () => {
             <i className="fab fa-instagram"></i>
           </a>
           <a
-            href="https:/www.linkedin.com/in/aman-kumar-singh-746344165"
+            href="https://www.linkedin.com/in/aman-kumar-singh-746344165/"
             target="_blank"
             rel="noopener noreferrer"
             className={`text-4xl hover:text-blue-500 ${isVisible ? '' : 'pointer-events-none'}`}
