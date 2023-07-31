@@ -24,7 +24,7 @@ const App = () => {
       </main>
       
       <Footer />
-      <div id="bottom"></div>
+      <div id="bottom" style={{ height: '1px', padding: '0', margin: '0' }}></div>
       <ScrollToTopButton />
     </div>
   );
