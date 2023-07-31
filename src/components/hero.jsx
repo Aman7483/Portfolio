@@ -11,10 +11,10 @@ const HeroSection = () => {
           className="rounded-full w-64 h-64 mb-6 mt-4 border-1 border-white shadow-lg"
           style={{ marginTop: '20px' }} // Add some space (20px) above the image
         />
-        <h1 className="text-4xl font-bold text-white mb-4">
+        <h1 className="text-4xl px-2 font-bold text-white mb-4">
           Hello, I'm Aman Kumar Singh
         </h1>
-        <p className="text-lg text-white">
+        <p className="text-lg px-2 text-white">
           Welcome to my website. I'm a web developer passionate about creating
           awesome websites with React and Tailwind CSS.
         </p>

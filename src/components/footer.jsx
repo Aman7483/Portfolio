@@ -105,6 +105,11 @@ const Footer = () => {
             position: relative;
           }
         }
+        @media screen and (max-width: 235px) {
+          footer {
+            position: relative;
+          }
+        }
         `}
       </style>
     </>
