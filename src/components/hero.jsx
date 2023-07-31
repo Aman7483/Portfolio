@@ -24,7 +24,7 @@ const HeroSection = () => {
           className="mt-8 px-6 py-3 shadow-2xl bg-slate-200 text-purple-500 rounded-lg hover:bg-purple-500 hover:text-white transition duration-300"
           download
         >
-          Download My Resume
+          Download My Resume!
         </a>
       </div>
     </div>
