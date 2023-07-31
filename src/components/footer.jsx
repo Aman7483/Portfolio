@@ -90,6 +90,21 @@ const Footer = () => {
           opacity: 0;
           transform: translateY(20px);
         }
+
+        /* Add a media query to adjust the footer position for small devices */
+        @media screen and (max-width: 767px) {
+          footer {
+            position: relative;
+            bottom: auto;
+          }
+        }
+
+        /* Add another media query to adjust the footer position for screens with width less than 435px */
+        @media screen and (max-width: 435px) {
+          footer {
+            position: relative;
+          }
+        }
         `}
       </style>
     </>
