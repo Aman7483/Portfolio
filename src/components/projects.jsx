@@ -3,6 +3,8 @@ import Calculator from '../assets/Calculator.png';
 import Password_Generator from '../assets/Password_Generator.png';
 import Portfolio from '../assets/Portfolio.png';
 import Timer from '../assets/Timer.png';
+import GoogleSearch from '../assets/GoogleSearch.png';
+import TaskManager from '../assets/TaskManager.png';
 
 const projects = [
   // Your project data here...
@@ -29,6 +31,18 @@ const projects = [
     description: 'A Simple Calculator',
     link: 'https://aman7483.github.io/Calculator/',
     image: Calculator, // Replace with the image path
+  },
+  {
+    title: 'Google Search Clone',
+    description: 'React-based search engine with modern UI and dark mode',
+    link: 'https://aman7483.github.io/GoogleSearch/',
+    image: GoogleSearch, // Replace with the image path
+  },
+  {
+    title: 'Task Manager',
+    description: 'Task Managing app',
+    link: 'https://aman7483.github.io/Task_Manager/',
+    image: TaskManager, // Replace with the image path
   },
 ];
 
@@ -66,7 +80,7 @@ const ProjectsSection = () => {
     <section id="projects" className="bg-gradient-to-b from-yellow-400 via-emerald-400 to-teal-500 py-10">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {projects.map((project, index) => (
             <a
               key={index}
@@ -124,8 +138,12 @@ const ProjectsSection = () => {
           }
 
           @media (min-width: 1024px) {
+            .grid {
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 columns on larger screens */
+            }
+
             .grid > * {
-              flex-basis: calc(33.33% - 12px); /* 33.33% with larger gap */
+              flex-basis: calc(25% - 12px); /* 25% with larger gap */
               margin: 12px; /* Larger gap between the cards on larger screens */
             }
           }
