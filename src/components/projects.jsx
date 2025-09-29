@@ -149,12 +149,8 @@ const ProjectCard = ({ project, index }) => {
 };
 
 const ProjectsSection = () => {
-  const [filter, setFilter] = useState('All');
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
-  const categories = ['All', ...new Set(projects.map(project => project.category))];
-  const filteredProjects = filter === 'All' ? projects : projects.filter(project => project.category === filter);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -186,32 +182,15 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className={`flex flex-wrap justify-center gap-4 mb-12 ${isVisible ? 'slide-up' : 'opacity-0'}`} style={{animationDelay: '0.2s'}}>
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setFilter(category)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                filter === category
-                  ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg shadow-cyan-400/25'
-                  : 'glass text-gray-400 hover:text-white hover:border-cyan-400/50'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
 
         {/* View More Button */}
-        <div className={`text-center mt-12 ${isVisible ? 'slide-up' : 'opacity-0'}`} style={{animationDelay: '0.6s'}}>
+        <div className={`text-center mt-12 ${isVisible ? 'slide-up' : 'opacity-0'}`} style={{animationDelay: '0.4s'}}>
           <a
             href="https://github.com/aman7483"
             target="_blank"

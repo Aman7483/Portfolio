@@ -49,10 +49,45 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
+              <div className="relative">
+                {/* Hexagonal Logo */}
+                <div className="w-12 h-12 relative">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <defs>
+                      <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#00d4ff" />
+                        <stop offset="100%" stopColor="#0099cc" />
+                      </linearGradient>
+                    </defs>
+                    {/* Hexagon shape */}
+                    <polygon 
+                      points="50,5 85,25 85,65 50,85 15,65 15,25" 
+                      fill="url(#logoGradient)" 
+                      stroke="rgba(0, 212, 255, 0.3)" 
+                      strokeWidth="1"
+                    />
+                    {/* Inner design */}
+                    <text 
+                      x="50" 
+                      y="58" 
+                      textAnchor="middle" 
+                      className="fill-white font-bold text-2xl"
+                      style={{fontSize: '32px', fontFamily: 'Inter, sans-serif'}}
+                    >
+                      A
+                    </text>
+                    {/* Accent lines */}
+                    <line x1="30" y1="35" x2="70" y2="35" stroke="rgba(255,255,255,0.3)" strokeWidth="1"/>
+                    <line x1="30" y1="65" x2="70" y2="65" stroke="rgba(255,255,255,0.3)" strokeWidth="1"/>
+                  </svg>
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-400/20 to-blue-500/20 blur-md -z-10"></div>
+                </div>
               </div>
-              <span className="text-xl font-bold gradient-text">Aman Singh</span>
+              <div className="flex flex-col">
+                <span className="text-lg font-bold gradient-text">Aman Singh</span>
+                <span className="text-xs text-gray-400 -mt-1">Full Stack Developer</span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}

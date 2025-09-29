@@ -89,56 +89,59 @@ const Footer = () => {
       <footer className={`fixed bottom-0 left-0 right-0 z-40 transition-all duration-500 transform ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
       }`}>
-        {/* Main Footer Content */}
-        <div className="glass-dark backdrop-blur-xl border-t border-gray-800">
+        {/* Main Footer Content with improved design */}
+        <div className="bg-gradient-to-t from-black/95 via-gray-900/90 to-gray-900/80 backdrop-blur-xl border-t border-cyan-400/20">
           <div className="container mx-auto px-6 py-8">
             {/* Social Links */}
-            <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <div className="flex flex-wrap justify-center gap-6 mb-8">
               {socialLinks.map((link, index) => (
                 <a
                   key={link.name}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group relative w-12 h-12 rounded-xl glass border border-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 hover:scale-110 hover:border-cyan-400/50 ${link.color} ${link.bgColor} slide-up`}
+                  className={`group relative w-14 h-14 rounded-2xl bg-gray-800/50 border border-gray-600/50 flex items-center justify-center text-gray-400 transition-all duration-300 hover:scale-110 hover:border-cyan-400/70 hover:bg-gray-700/50 ${link.color} slide-up`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                   aria-label={link.name}
                 >
-                  <i className={`${link.icon} text-lg`}></i>
+                  <i className={`${link.icon} text-xl`}></i>
                   
                   {/* Tooltip */}
-                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-gray-900/90 backdrop-blur-sm text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none border border-gray-700">
                     {link.name}
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900/90"></div>
                   </div>
+                  
+                  {/* Hover glow effect */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               ))}
             </div>
 
             {/* Quick Contact Info */}
-            <div className="text-center mb-6 slide-up" style={{animationDelay: '0.6s'}}>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-gray-400">
-                <a href="mailto:aman7483@gmail.com" className="flex items-center hover:text-cyan-400 transition-colors duration-300">
+            <div className="text-center mb-8 slide-up" style={{animationDelay: '0.6s'}}>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-gray-400">
+                <a href="mailto:aman7483@gmail.com" className="flex items-center hover:text-cyan-400 transition-colors duration-300 group">
                   <i className="fas fa-envelope mr-2"></i>
-                  aman7483@gmail.com
+                  <span className="group-hover:underline">aman7483@gmail.com</span>
                 </a>
-                <span className="hidden sm:block text-gray-600">|</span>
-                <a href="tel:+919110065510" className="flex items-center hover:text-cyan-400 transition-colors duration-300">
+                <span className="hidden sm:block text-gray-600 text-2xl">•</span>
+                <a href="tel:+919110065510" className="flex items-center hover:text-cyan-400 transition-colors duration-300 group">
                   <i className="fas fa-phone mr-2"></i>
-                  +91 9110065510
+                  <span className="group-hover:underline">+91 9110065510</span>
                 </a>
               </div>
             </div>
 
             {/* Copyright and Links */}
-            <div className="border-t border-gray-800 pt-6">
+            <div className="border-t border-gray-700/50 pt-6">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="text-center md:text-left slide-up" style={{animationDelay: '0.8s'}}>
                   <p className="text-gray-400 text-sm">
                     © {new Date().getFullYear()} <span className="gradient-text font-semibold">Aman Kumar Singh</span>. All rights reserved.
                   </p>
                   <p className="text-gray-500 text-xs mt-1">
-                    Crafted with ❤️ using React & Tailwind CSS
+                    Crafted with <span className="text-red-400">❤️</span> using React & Tailwind CSS
                   </p>
                 </div>
                 
@@ -149,21 +152,18 @@ const Footer = () => {
                   <a 
                     href="resume.pdf" 
                     download 
-                    className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-300 flex items-center"
+                    className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-300 flex items-center group"
                   >
-                    <i className="fas fa-download mr-1"></i>
-                    Resume
+                    <i className="fas fa-download mr-2 group-hover:animate-bounce"></i>
+                    <span className="group-hover:underline">Resume</span>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-cyan-400/20 to-transparent"></div>
-          <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-blue-500/20 to-transparent"></div>
+          
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-cyan-400/5 via-transparent to-transparent pointer-events-none"></div>
         </div>
       </footer>
 
