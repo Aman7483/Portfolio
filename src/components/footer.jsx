@@ -90,7 +90,7 @@ const Footer = () => {
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
       }`}>
         {/* Main Footer Content with improved design */}
-        <div className="bg-gradient-to-t from-black/95 via-gray-900/90 to-gray-900/80 backdrop-blur-xl border-t border-cyan-400/20">
+        <div className="bg-gradient-to-t from-black/20 via-gray-900/15 to-transparent backdrop-blur-sm border-t border-cyan-400/10">
           <div className="container mx-auto px-6 py-8">
             {/* Social Links */}
             <div className="flex flex-wrap justify-center gap-6 mb-8">
@@ -100,16 +100,16 @@ const Footer = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group relative w-14 h-14 rounded-2xl bg-gray-800/50 border border-gray-600/50 flex items-center justify-center text-gray-400 transition-all duration-300 hover:scale-110 hover:border-cyan-400/70 hover:bg-gray-700/50 ${link.color} slide-up`}
+                  className={`group relative w-14 h-14 rounded-2xl bg-gray-800/30 border border-gray-600/30 flex items-center justify-center text-gray-300 transition-all duration-300 hover:scale-110 hover:border-cyan-400/70 hover:bg-gray-700/40 ${link.color} slide-up`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                   aria-label={link.name}
                 >
                   <i className={`${link.icon} text-xl`}></i>
                   
                   {/* Tooltip */}
-                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-gray-900/90 backdrop-blur-sm text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none border border-gray-700">
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-gray-900/80 backdrop-blur-md text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none border border-gray-700/50">
                     {link.name}
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900/90"></div>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900/80"></div>
                   </div>
                   
                   {/* Hover glow effect */}
@@ -120,7 +120,7 @@ const Footer = () => {
 
             {/* Quick Contact Info */}
             <div className="text-center mb-8 slide-up" style={{animationDelay: '0.6s'}}>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-gray-400">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-gray-300">
                 <a href="mailto:aman7483@gmail.com" className="flex items-center hover:text-cyan-400 transition-colors duration-300 group">
                   <i className="fas fa-envelope mr-2"></i>
                   <span className="group-hover:underline">aman7483@gmail.com</span>
@@ -134,25 +134,25 @@ const Footer = () => {
             </div>
 
             {/* Copyright and Links */}
-            <div className="border-t border-gray-700/50 pt-6">
+            <div className="border-t border-gray-700/20 pt-6">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="text-center md:text-left slide-up" style={{animationDelay: '0.8s'}}>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-300 text-sm">
                     © {new Date().getFullYear()} <span className="gradient-text font-semibold">Aman Kumar Singh</span>. All rights reserved.
                   </p>
-                  <p className="text-gray-500 text-xs mt-1">
+                  <p className="text-gray-400 text-xs mt-1">
                     Crafted with <span className="text-red-400">❤️</span> using React & Tailwind CSS
                   </p>
                 </div>
                 
                 <div className="flex items-center gap-6 slide-up" style={{animationDelay: '1s'}}>
-                  <a href="#hero" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-300">
+                  <a href="#hero" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors duration-300">
                     Back to Top
                   </a>
                   <a 
                     href="resume.pdf" 
                     download 
-                    className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-300 flex items-center group"
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors duration-300 flex items-center group"
                   >
                     <i className="fas fa-download mr-2 group-hover:animate-bounce"></i>
                     <span className="group-hover:underline">Resume</span>
@@ -163,7 +163,7 @@ const Footer = () => {
           </div>
           
           {/* Subtle gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-cyan-400/5 via-transparent to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-cyan-400/2 via-transparent to-transparent pointer-events-none"></div>
         </div>
       </footer>
 
